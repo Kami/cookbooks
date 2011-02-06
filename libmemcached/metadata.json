@@ -1,0 +1,78 @@
+{
+  "suggestions": {
+  },
+  "license": "Apache 2.0",
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "description": "Install/Configure libmemcached",
+  "version": "0.0.1",
+  "recipes": {
+    "libmemcached": "Installs libmemcached from source"
+  },
+  "maintainer": "Tomaz Muraus",
+  "attributes": {
+    "libmemcached/tarball_url": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "http://launchpad.net/libmemcached/1.0/0.44/+download/libmemcached-0.44.tar.gz",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "Tarball URL",
+      "description": "URL to the libmemcached tarball"
+    },
+    "libmemcached/tarball_name": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "libmemcached-0.44.tar.gz",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "Tarball name",
+      "description": "libmemcached tarball name"
+    },
+    "libmemcached/dirname": {
+      "required": "optional",
+      "calculated": false,
+      "choice": [
+
+      ],
+      "default": "libmemcached-0.44",
+      "type": "string",
+      "recipes": [
+
+      ],
+      "display_name": "Directory name",
+      "description": "Directory where the tarball gets extracted to"
+    }
+  },
+  "replacing": {
+  },
+  "dependencies": {
+    "build-essential": [
+
+    ]
+  },
+  "platforms": {
+    "ubuntu": [
+
+    ]
+  },
+  "maintainer_email": "tomaz+cookbooks@tomaz.me",
+  "name": "libmemcached",
+  "groupings": {
+  },
+  "recommendations": {
+  }
+}
