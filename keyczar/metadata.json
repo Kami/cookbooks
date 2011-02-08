@@ -1,0 +1,38 @@
+{
+  "suggestions": {
+  },
+  "license": "Apache 2.0",
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "description": "Installs/Configures keyczar",
+  "version": "0.0.1",
+  "recipes": {
+  },
+  "maintainer": "Tomaz Muraus",
+  "attributes": {
+  },
+  "replacing": {
+  },
+  "dependencies": {
+    "swig": [
+
+    ],
+    "build-essential": [
+
+    ]
+  },
+  "platforms": {
+    "ubuntu": [
+
+    ]
+  },
+  "maintainer_email": "tomaz+cookbooks@tomaz.me",
+  "name": "keyczar",
+  "groupings": {
+  },
+  "recommendations": {
+  }
+}
