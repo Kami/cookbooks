@@ -9,12 +9,29 @@
 
 include_recipe "nodejs"
 
+git "/tmp/npm-checkout" do
+  repository "https://github.com/isaacs/npm.git"
+  reference "#{node[:npm][:revision]}"
+  action :checkout
+  not_if { FileTest.exists?("/usr/local/bin/npm") }
+end
+
 bash "install_npm" do
+  user "root"
+
+  cwd "/tmp/npm-checkout"
+  code <<-EOH
+    make install
+  EOH
+  not_if { FileTest.exists?("/usr/local/bin/npm") }
+end
+
+bash "cleanup" do
   user "root"
 
   cwd "/tmp/"
   code <<-EOH
-    curl http://npmjs.org/install.sh | sh
+    rm -rf /tmp/npm-checkout
   EOH
-  not_if { FileTest.exists?("/usr/local/bin/npm") }
+  not_if { !FileTest.exists?("/tmp/npm-checkout") }
 end
